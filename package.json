@@ -1,7 +1,7 @@
 {
   "name": "interactive-commit",
   "description": "interactive snippet tool",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "akira-toriyama",
   "main": "lib/opt/index.js",
   "bin": {
