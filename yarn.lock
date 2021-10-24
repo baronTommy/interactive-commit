@@ -4351,6 +4351,21 @@ inquirer@^3.3.0:
     strip-ansi "^4.0.0"
     through "^2.3.6"
 
+interactive-commit@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/interactive-commit/-/interactive-commit-1.0.0.tgz#f51ec48b20c9bd4941017feb09d713f0f5a4915d"
+  integrity sha512-nhdEk/MAgjTXJRuRalPQAA/hORAMTQDwPg/rHjDvrsJBCwJly4hNqE7lKNOmKW/SyMqmWKQSr5XaNgfkYaD7ag==
+  dependencies:
+    "@octokit/rest" "18.12.0"
+    cac "6.7.11"
+    chalk "4.1.2"
+    cosmiconfig "7.0.1"
+    gitmojis "3.5.0"
+    inquirer "8.2.0"
+    inquirer-search-list "1.2.6"
+    table "6.7.2"
+    tsc-alias "1.3.10"
+
 internal-slot@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/internal-slot/-/internal-slot-1.0.3.tgz#7347e307deeea2faac2ac6205d4bc7d34967f59c"

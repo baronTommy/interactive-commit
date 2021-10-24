@@ -9,7 +9,7 @@ const main = () => {
   const dev = fs.existsSync(project);
 
   if (!dev) {
-    console.log("wip");
+    return require("interactive-commit").main();
   }
   const tsConfigPaths = require("tsconfig-paths");
   tsConfigPaths.register({

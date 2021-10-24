@@ -1,4 +1,4 @@
-const { github, gitmojis } = require("./opt").plugin;
+const { github, gitmojis } = require("interactive-commit").plugin;
 
 const notSelected = { description: "_NotSelected_", value: "" };
 
@@ -26,6 +26,9 @@ const fetchMyIssues = () =>
     .then((v) => [notSelected, ...v])
     .catch(() => []);
 
+/**
+ * @type {import('interactive-commit').Setting}
+ */
 module.exports = {
   /**
    * The part that matches questionDictionary.name will be replaced.
@@ -123,7 +126,7 @@ BREAKING CHANGE: {{breakingChange}}`,
       name: "body",
       type: "input",
       message: "Please input the body.",
-      overwriteTpl: (tpl) => tpl.replace(/\r?\n{2,}/g, "").trim(),
+      overwriteTpl: (tpl) => tpl.replace(/\r?\n{2,}/, "\r\n\r\n").trim(),
     },
     {
       name: "issue",
