@@ -9,8 +9,6 @@
   </a>
 </p>
 
-<!-- TODO パス変更 -->
-
 ![preview](https://github.com/baronTommy/interactive-commit/blob/main/media/eyeCatch.gif)
 
 ## Install
@@ -24,8 +22,6 @@ npm i -D interactive-commit
 `interactive-commit.config.js`
 
 ### Example
-
-<!-- TODO パス変更 -->
 
 https://github.com/baronTommy/interactive-commit/blob/main/interactive-commit.config.js
 
