@@ -1,0 +1,41 @@
+#!/usr/bin/env node
+
+const cli = require("cac")();
+const path = require("path");
+const fs = require("fs");
+
+const main = () => {
+  const project = path.join(__dirname, "../tsconfig.json");
+  const dev = fs.existsSync(project);
+
+  if (!dev) {
+    console.log("wip");
+  }
+  const tsConfigPaths = require("tsconfig-paths");
+  tsConfigPaths.register({
+    baseUrl: "app",
+    paths: {
+      "~/*": ["./*"],
+    },
+  });
+
+  require("ts-node").register({ project });
+  return require("main").main();
+};
+
+cli
+  .command("commit", "Interactively commit using the prompts")
+  .option("--hook", "DO NOT USE")
+  .action((args) => {
+    if (!args.hook) {
+      return;
+    }
+    main().then((msg) => {
+      console.log(msg);
+
+      fs.writeFileSync(path.join(process.cwd(), ".git", "COMMIT_EDITMSG"), msg);
+    });
+  });
+
+cli.help();
+cli.parse();
