@@ -18,10 +18,12 @@ const fetchMyIssues = () =>
       state: "open",
     })
     .then((r) =>
-      r.data.map((issue) => ({
-        description: `#${issue.number}: ${issue.title}`,
-        value: `${issue.number}`,
-      }))
+      r.data
+        .filter((v) => !v.pull_request)
+        .map((issue) => ({
+          description: `#${issue.number}: ${issue.title}`,
+          value: `${issue.number}`,
+        }))
     )
     .then((v) => [notSelected, ...v])
     .catch(() => []);
