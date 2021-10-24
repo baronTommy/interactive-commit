@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm i -D @capsule-corporation/interactive-commit
+npm i -D interactive-commit
 ```
 
 ## Config file
