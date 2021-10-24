@@ -31,9 +31,9 @@ module.exports = {
    * The part that matches questionDictionary.name will be replaced.
    */
   template: `{{type}}({{scope}}): {{gitmoji}} {{description}}
-          
+
 {{body}}
-             
+
 Close #{{issue}}
 BREAKING CHANGE: {{breakingChange}}`,
   config: {
