@@ -20,8 +20,7 @@ module.exports = {
               section: v.value,
               hidden: false,
             })),
-            // TODO 区切り文字を変える
-            { type: "", section: "---", hidden: false },
+            // { type: "", section: "-", hidden: false },
           ],
         },
       },
