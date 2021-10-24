@@ -71,7 +71,7 @@
     "lint": "eslint --fix --ignore-path .gitignore .",
     "fmt": "prettier --write --ignore-path .gitignore .",
     "preCommit": "yarn quality",
-    "prepack": "npm run quality && rm -rf lib && tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
+    "prepack": "npm run quality && rm -rf lib && tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json",
     "prepare": "husky install"
   }
 }
