@@ -1,4 +1,4 @@
 import { Octokit } from "@octokit/rest";
 const octokit = new Octokit();
 
-export const fetchIssues = octokit.issues.listLabelsOnIssue;
+export const fetchIssues = octokit.issues.listForRepo;

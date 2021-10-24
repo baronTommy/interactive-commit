@@ -26,7 +26,7 @@ const fetchMyIssues = () =>
         }))
     )
     .then((v) => [notSelected, ...v])
-    .catch(() => []);
+    .catch(() => [notSelected]);
 
 /**
  * @type {import('interactive-commit').Setting}
