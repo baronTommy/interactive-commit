@@ -1,10 +1,14 @@
 import type { SearchListTypeQ, Setting } from "~/domain/core";
 
-type P = {
+type MakeQuestion = (p: {
   question: SearchListTypeQ;
   template: Setting["template"];
-};
-type MakeQuestion = (p: P) => Promise<P>;
+}) => Promise<{
+  question: SearchListTypeQ & {
+    choices: Array<{ name: string; description: string; value: string }>;
+  };
+  template: Setting["template"];
+}>;
 export const makeQuestion: MakeQuestion = async (p) => {
   const choicesObj = await p.question.getChoices();
 
