@@ -1,7 +1,6 @@
 #!/bin/sh
 
-if [ -n "$CI" ] ; then
-    echo "skip"
-else
+if [[ "$(git config --get my.interactive)" = yes ]];then
+    # git -c my.interactive=yes commit
     exec < /dev/tty bin/run commit --hook
 fi
