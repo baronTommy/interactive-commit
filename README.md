@@ -7,6 +7,9 @@
   <a href="https://gitmoji.dev">
     <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
   </a>
+  <a href="https://codecov.io/gh/baronTommy/interactive-commit">
+    <img src="https://codecov.io/gh/baronTommy/interactive-commit/branch/main/graph/badge.svg?token=RBVLU6CIPQ"/>
+  </a>
 </p>
 
 ![preview](https://github.com/baronTommy/interactive-commit/blob/main/media/eyeCatch.gif)
