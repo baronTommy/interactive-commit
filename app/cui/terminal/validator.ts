@@ -1,12 +1,12 @@
 import type { Question } from "~/domain/core";
-import type { AnswerLike, AnswerVO } from "./type";
+import type { AnswerValue, AnswerVO } from "./type";
 
-type FmtAnswer = (p: AnswerLike) => string;
+type FmtAnswer = (p: AnswerValue) => string;
 
-const isValid = (p: unknown): p is AnswerLike =>
+const isValid = (p: unknown): p is AnswerValue =>
   typeof p === "string" || typeof p === "number";
 
-const fmtAnswer: FmtAnswer = (p: AnswerLike) =>
+const fmtAnswer: FmtAnswer = (p: AnswerValue) =>
   typeof p === "number" ? Number(p).toString() : p;
 
 type Valid = (p: { answerVO: AnswerVO; questionName: Question["name"] }) =>
