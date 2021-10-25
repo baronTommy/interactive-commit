@@ -14,19 +14,15 @@
 
 ![preview](https://github.com/baronTommy/interactive-commit/blob/main/media/eyeCatch.gif)
 
-## Install
+## Use
 
 ```bash
 npm i -D interactive-commit
+
+# Example
+# https://github.com/baronTommy/interactive-commit/blob/main/interactive-commit.config.js
+touch interactive-commit.config.js
 ```
-
-## Config file
-
-`interactive-commit.config.js`
-
-### Example
-
-https://github.com/baronTommy/interactive-commit/blob/main/interactive-commit.config.js
 
 ## Commit hook
 
