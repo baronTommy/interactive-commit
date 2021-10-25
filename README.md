@@ -38,5 +38,5 @@ https://github.com/baronTommy/interactive-commit/blob/main/interactive-commit.co
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-exec < /dev/tty bin/run commit --hook $1
+exec < /dev/tty && yarn interactive-commit commit --hook
 ```
