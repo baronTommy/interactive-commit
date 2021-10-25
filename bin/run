@@ -9,7 +9,7 @@ const main = () => {
   const dev = fs.existsSync(project);
 
   if (!dev) {
-    return require("interactive-commit").main();
+    return require("../lib/app").main();
   }
   const tsConfigPaths = require("tsconfig-paths");
   tsConfigPaths.register({
@@ -31,8 +31,6 @@ cli
       return;
     }
     main().then((msg) => {
-      console.log(msg);
-
       fs.writeFileSync(path.join(process.cwd(), ".git", "COMMIT_EDITMSG"), msg);
     });
   });
