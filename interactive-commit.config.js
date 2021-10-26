@@ -94,10 +94,6 @@ BREAKING CHANGE: {{breakingChange}}`,
               "chore: Other changes that don't modify src or test files",
             value: "chore",
           },
-          {
-            description: "revert: Reverts a previous commit",
-            value: "revert",
-          },
         ],
     },
     {
