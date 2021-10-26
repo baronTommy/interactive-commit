@@ -10,6 +10,9 @@
   <a href="https://codecov.io/gh/baronTommy/interactive-commit">
     <img src="https://codecov.io/gh/baronTommy/interactive-commit/branch/main/graph/badge.svg?token=RBVLU6CIPQ"/>
   </a>
+  <a href="https://github.com/baronTommy/interactive-commit/actions/workflows/release.yml">
+    <img alt=".github/workflows/release.yml" src="https://github.com/baronTommy/interactive-commit/actions/workflows/release.yml/badge.svg">
+  </a>
 </p>
 
 ![preview](https://github.com/baronTommy/interactive-commit/blob/main/media/eyeCatch.gif)
@@ -19,10 +22,12 @@
 ```bash
 npm i -D interactive-commit
 
-# Example
-# https://github.com/baronTommy/interactive-commit/blob/main/interactive-commit.config.js
 touch interactive-commit.config.js
 ```
+
+example
+
+- https://github.com/baronTommy/interactive-commit/blob/main/interactive-commit.config.js
 
 ## Commit hook
 
@@ -35,4 +40,29 @@ touch interactive-commit.config.js
 . "$(dirname "$0")/_/husky.sh"
 
 exec < /dev/tty && yarn interactive-commit commit --hook
+```
+
+### githooks
+
+`prepare-commit-msg`
+
+```bash
+#!/bin/sh
+
+if [[ "$(git config --get my.interactive)" = yes ]];then
+    # git -c my.interactive=yes commit
+    exec < /dev/tty bin/run commit --hook
+fi
+```
+
+```bash
+git -c my.interactive=yes commit
+```
+
+`package.json`
+
+```json
+"scripts": {
+  "prepare": "git config --local core.hooksPath .githooks"
+}
 ```
