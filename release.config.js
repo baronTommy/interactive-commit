@@ -20,7 +20,6 @@ module.exports = {
               section: v.value,
               hidden: false,
             })),
-            // { type: "", section: "-", hidden: false },
           ],
         },
       },
@@ -28,5 +27,6 @@ module.exports = {
     "@semantic-release/github",
     "@semantic-release/npm",
     "@semantic-release/git",
+    "@semantic-release/changelog",
   ],
 };
