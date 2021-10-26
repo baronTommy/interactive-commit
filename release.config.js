@@ -20,7 +20,6 @@ module.exports = {
               section: v.value,
               hidden: false,
             })),
-            // { type: "", section: "-", hidden: false },
           ],
         },
       },
