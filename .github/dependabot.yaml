@@ -6,7 +6,5 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    # npm プルリクエストのラベルを指定する
-    labels:
-      - "npm"
-      - "dependencies"
+    allow:
+      - dependency-type: "all"
