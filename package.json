@@ -5,7 +5,7 @@
   "author": "akira-toriyama",
   "main": "lib/opt/index.js",
   "bin": {
-    "interactive-commit": "./bin/run"
+    "interactive-commit": "./lib/app/cui/commands"
   },
   "dependencies": {
     "@octokit/rest": "18.12.0",
@@ -70,7 +70,6 @@
     "quality:type": "tsc --project ./tsconfig.json --noEmit",
     "lint": "eslint --fix --ignore-path .gitignore .",
     "fmt": "prettier --write --ignore-path .gitignore .",
-    "preCommit": "yarn quality",
     "prepack": "npm run quality && rm -rf lib && tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json",
     "prepare": "git config --local core.hooksPath .githooks"
   }
