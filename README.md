@@ -39,7 +39,7 @@ example
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-exec < /dev/tty && npx interactive-commit commit --hook
+exec < /dev/tty && yarn interactive-commit commit --hook
 ```
 
 ### githooks
