@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+
+const path = require("path");
+const fs = require("fs");
+
+const main = () => {
+  const project = path.join(__dirname, "../tsconfig.json");
+  const dev = fs.existsSync(project);
+
+  if (!dev) {
+    return require("../lib/app/cui/commands");
+  }
+  const tsConfigPaths = require("tsconfig-paths");
+  tsConfigPaths.register({
+    baseUrl: "app",
+    paths: {
+      "~/*": ["./*"],
+    },
+  });
+
+  require("ts-node").register({ project });
+  return require("../lib/app/cui/commands");
+};
+
+main();
