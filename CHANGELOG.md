@@ -1,3 +1,18 @@
+### [1.4.3](https://github.com/baronTommy/interactive-commit/compare/v1.4.2...v1.4.3) (2021-10-27)
+
+### chore
+
+- :fire: remove yarn ([fda8dec](https://github.com/baronTommy/interactive-commit/commit/fda8decf6e24eff2d5cd954b2f5b6bee3101f7b8))
+- :wrench: update conf ([c0452a3](https://github.com/baronTommy/interactive-commit/commit/c0452a3d3ce9bc251269fcb72a10c27b3eb317ba))
+
+### docs
+
+- :memo: fix doc ([a6cd797](https://github.com/baronTommy/interactive-commit/commit/a6cd797ceb4c7f435db14a4a84b88c3349b6931e))
+
+### fix
+
+- :bug: fix ci ([9e3c2d5](https://github.com/baronTommy/interactive-commit/commit/9e3c2d5dedc073ca2d7ebc9f4aec7450967d77cf))
+
 ### [1.4.2](https://github.com/baronTommy/interactive-commit/compare/v1.4.1...v1.4.2) (2021-10-27)
 
 ### fix
