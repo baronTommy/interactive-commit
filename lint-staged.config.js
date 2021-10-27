@@ -1,7 +1,7 @@
 module.exports = {
-  "*.json": ["yarn fmt"],
-  "*.md": ["yarn fmt"],
-  "*.yml": ["yarn fmt"],
-  "*.js": ["yarn lint", "yarn fmt"],
-  "*.{ts,tsx}": ["yarn lint", "yarn fmt"],
+  "*.json": ["npm run fmt"],
+  "*.md": ["npm run fmt"],
+  "*.yml": ["npm run fmt"],
+  "*.js": ["npm run lint", "npm run fmt"],
+  "*.{ts,tsx}": ["npm run lint", "npm run fmt"],
 };
