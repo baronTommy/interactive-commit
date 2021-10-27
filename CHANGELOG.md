@@ -1,3 +1,9 @@
+### [1.4.2](https://github.com/baronTommy/interactive-commit/compare/v1.4.1...v1.4.2) (2021-10-27)
+
+### fix
+
+- :ambulance: fix bin ([9ee037d](https://github.com/baronTommy/interactive-commit/commit/9ee037d9e4ec7d650b1c782c4acd3ffc8e8855ca))
+
 ### [1.4.1](https://github.com/baronTommy/interactive-commit/compare/v1.4.0...v1.4.1) (2021-10-27)
 
 ### fix
