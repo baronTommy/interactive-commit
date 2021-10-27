@@ -1,12 +1,9 @@
-import { cosmiconfigSync } from "cosmiconfig";
 import * as terminal from "./cui/terminal";
 import type { Setting } from "./domain/core";
 import * as workFlow from "./useCase/workFlow";
 
-const conf = cosmiconfigSync("interactive-commit").search()?.config;
-
 type Main = (p: Setting) => Promise<string>;
-export const main: Main = async (p = conf) => {
+export const main: Main = async (p) => {
   const question = workFlow.getQuestion(p);
   const template = p.template;
 

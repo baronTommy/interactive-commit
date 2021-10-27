@@ -30,7 +30,7 @@ const renderTpl: RenderTpl = (p) => {
         paddingRight: 1,
       },
       header: {
-        content: chalk.bold("Your template"),
+        content: chalk.bold(p.config.templateName),
       },
       border: {
         topBody: chalk[p.config.color](`─`),

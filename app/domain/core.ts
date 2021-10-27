@@ -34,5 +34,6 @@ export type Setting = {
      * https://github.com/chalk/chalk#colors
      */
     color: typeof ForegroundColor;
+    templateName: string;
   };
 };
