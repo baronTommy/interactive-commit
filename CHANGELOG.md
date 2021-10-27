@@ -1,3 +1,20 @@
+## [1.4.0](https://github.com/baronTommy/interactive-commit/compare/v1.3.0...v1.4.0) (2021-10-27)
+
+### build
+
+- **deps:** bump core-js-compat from 3.18.3 to 3.19.0 ([f6654c9](https://github.com/baronTommy/interactive-commit/commit/f6654c987a2a0abebee8083d791b2e177e337147))
+- **deps:** bump jest-util from 27.2.5 to 27.3.1 ([8e31ba3](https://github.com/baronTommy/interactive-commit/commit/8e31ba30cfb7b3620baa056d318e75ad1d861922))
+- **deps:** bump shell-quote from 1.7.2 to 1.7.3 ([f42388e](https://github.com/baronTommy/interactive-commit/commit/f42388ed94adcd717e1dd252ce0a79ea8dff50f5))
+
+### docs
+
+- :memo: update readme ([ffca6a3](https://github.com/baronTommy/interactive-commit/commit/ffca6a364838b0f8ddcadec2a93a09cb84b9a396))
+
+### feat
+
+- :sparkles: add templateName ([bf23d1a](https://github.com/baronTommy/interactive-commit/commit/bf23d1a53c783792fc315471b75179ac96b17d62))
+- :sparkles: update commit ([78bd729](https://github.com/baronTommy/interactive-commit/commit/78bd72921655b4e74b4d65b29210507985c06971))
+
 ## [1.3.0](https://github.com/baronTommy/interactive-commit/compare/v1.2.0...v1.3.0) (2021-10-26)
 
 ### feat
