@@ -1,3 +1,9 @@
+### [1.4.1](https://github.com/baronTommy/interactive-commit/compare/v1.4.0...v1.4.1) (2021-10-27)
+
+### fix
+
+- :bug: fix bin ([393903d](https://github.com/baronTommy/interactive-commit/commit/393903dbdb0fb67ddb50e8663e0855e4991fe4fc))
+
 ## [1.4.0](https://github.com/baronTommy/interactive-commit/compare/v1.3.0...v1.4.0) (2021-10-27)
 
 ### build
