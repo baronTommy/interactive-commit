@@ -1,3 +1,9 @@
+### [1.5.1](https://github.com/baronTommy/interactive-commit/compare/v1.5.0...v1.5.1) (2021-10-31)
+
+### fix
+
+- :memo: fix doc ([e3728eb](https://github.com/baronTommy/interactive-commit/commit/e3728eb051636078a95edd121df78a25a350610c))
+
 ## [1.5.0](https://github.com/baronTommy/interactive-commit/compare/v1.4.3...v1.5.0) (2021-10-31)
 
 ### docs
