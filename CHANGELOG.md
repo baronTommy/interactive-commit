@@ -1,3 +1,9 @@
+### [1.5.2](https://github.com/baronTommy/interactive-commit/compare/v1.5.1...v1.5.2) (2021-10-31)
+
+### fix
+
+- :bug: fix script ([1874178](https://github.com/baronTommy/interactive-commit/commit/1874178737e526a749ca3872c119a599a1614c3a))
+
 ### [1.5.1](https://github.com/baronTommy/interactive-commit/compare/v1.5.0...v1.5.1) (2021-10-31)
 
 ### fix
