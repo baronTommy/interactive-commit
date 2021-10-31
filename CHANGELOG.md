@@ -1,3 +1,13 @@
+## [1.5.0](https://github.com/baronTommy/interactive-commit/compare/v1.4.3...v1.5.0) (2021-10-31)
+
+### docs
+
+- :memo: update doc ([8b42d6d](https://github.com/baronTommy/interactive-commit/commit/8b42d6d38a325a35cbf3f76aa98378fe5f2d53bf))
+
+### feat
+
+- :recycle: dir ([329ff41](https://github.com/baronTommy/interactive-commit/commit/329ff4130bfe74c9cf77027b0ba523669dcbec1a))
+
 ### [1.4.3](https://github.com/baronTommy/interactive-commit/compare/v1.4.2...v1.4.3) (2021-10-27)
 
 ### chore
