@@ -1,7 +1,7 @@
 import { cac } from "cac";
 import { cosmiconfigSync } from "cosmiconfig";
+import { main } from "~/app/main";
 import { commitMsg } from "~/cui/commit";
-import { main } from "~/main";
 
 const cli = cac();
 

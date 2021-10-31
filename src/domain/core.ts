@@ -1,5 +1,3 @@
-import type { ForegroundColor } from "chalk";
-
 export type Answer = string;
 
 type QuestionBase = {
@@ -33,7 +31,25 @@ export type Setting = {
     /**
      * https://github.com/chalk/chalk#colors
      */
-    color: typeof ForegroundColor;
+    color:
+      | "black"
+      | "red"
+      | "green"
+      | "yellow"
+      | "blue"
+      | "magenta"
+      | "cyan"
+      | "white"
+      | "gray"
+      | "grey"
+      | "blackBright"
+      | "redBright"
+      | "greenBright"
+      | "yellowBright"
+      | "blueBright"
+      | "magentaBright"
+      | "cyanBright"
+      | "whiteBright";
     templateName: string;
   };
 };

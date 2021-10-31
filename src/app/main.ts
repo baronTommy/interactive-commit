@@ -1,6 +1,6 @@
-import * as terminal from "./cui/terminal";
-import type { Setting } from "./domain/core";
-import * as workFlow from "./useCase/workFlow";
+import * as workFlow from "~/app/useCase/workFlow";
+import * as terminal from "~/cui/terminal";
+import type { Setting } from "~/domain/core";
 
 type Main = (p: Setting) => Promise<string>;
 export const main: Main = async (p) => {

@@ -8,8 +8,8 @@
     "target": "ESNext",
     "baseUrl": ".",
     "paths": {
-      "~/*": ["app/*"]
+      "~/*": ["src/*"]
     }
   },
-  "include": ["app/**/*", "opt/**/*"]
+  "include": ["src/**/*"]
 }

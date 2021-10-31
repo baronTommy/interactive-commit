@@ -1,4 +1,4 @@
-import { makeQuestion } from "./input";
+import { makeQuestion } from "./index";
 
 describe("makeQuestion", () => {
   test("res test", async () => {
