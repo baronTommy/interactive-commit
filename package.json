@@ -66,7 +66,7 @@
     "quality": "run-p quality:*",
     "quality:lint-fmt": "run-s lint fmt",
     "quality:unitTest": "jest --testPathIgnorePatterns .gitignore",
-    "quality:jscpd": "jscpd ./app",
+    "quality:jscpd": "jscpd ./src",
     "quality:type": "tsc --project ./tsconfig.json --noEmit",
     "lint": "eslint --fix --ignore-path .gitignore .",
     "fmt": "prettier --write --ignore-path .gitignore .",
