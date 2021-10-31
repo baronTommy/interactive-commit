@@ -4,8 +4,8 @@ import * as inquirer from "inquirer";
 // @ts-expect-error
 import * as inquirerAutocompletePrompt from "inquirer-search-list";
 import { table } from "table";
+import * as workFlow from "~/app/useCase/workFlow";
 import type { Question, Setting } from "~/domain/core";
-import * as workFlow from "~/useCase/workFlow";
 import type { AnswerVO } from "./type";
 inquirer.registerPrompt("search-list", inquirerAutocompletePrompt);
 

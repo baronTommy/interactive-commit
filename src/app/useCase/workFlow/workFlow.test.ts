@@ -1,9 +1,9 @@
-import { makeQuestion as makeQuestionForInput } from "~/useCase/qAndA/input";
-import { makeQuestion as makeQuestionForSearchList } from "~/useCase/qAndA/searchList";
+import { makeQuestion as makeQuestionForInput } from "~/app/useCase/qAndA/input";
+import { makeQuestion as makeQuestionForSearchList } from "~/app/useCase/qAndA/searchList";
 import { findQuestion, getQuestion, isDone, updateTemplate } from "./workFlow";
 
-jest.mock("~/useCase/qAndA/searchList");
-jest.mock("~/useCase/qAndA/input");
+jest.mock("~/app/useCase/qAndA/searchList");
+jest.mock("~/app/useCase/qAndA/input");
 
 describe("getQuestion", () => {
   test("array is empty", () => {
