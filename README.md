@@ -51,7 +51,7 @@ exec < /dev/tty && npx interactive-commit commit --hook
 
 if [[ "$(git config --get my.interactive)" = yes ]];then
     # git -c my.interactive=yes commit
-    exec < /dev/tty yarn interactive-commit commit --hook
+    exec < /dev/tty && yarn interactive-commit commit --hook
 fi
 ```
 
