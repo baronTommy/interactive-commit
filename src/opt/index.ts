@@ -1,6 +1,8 @@
 import { fetchIssues } from "./plugin/github";
 import { gitmojis } from "./plugin/gitmoji";
-export type { Setting } from "./type";
+
+// ts-prune-ignore-next
+export type { Setting } from "~/domain/core";
 
 // ts-prune-ignore-next
 export const plugin = {
