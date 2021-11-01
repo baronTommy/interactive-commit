@@ -1,7 +1,7 @@
 import * as input from "~/app/useCase/qAndA/input";
 import * as searchList from "~/app/useCase/qAndA/searchList";
 import type { Question, Setting } from "~/domain/core";
-import * as WorkFlow from "~/domain/workFlow";
+import type * as WorkFlow from "~/domain/workFlow";
 
 export const getQuestion: WorkFlow.GetQuestion = (p) =>
   p.questionDictionary.shift();
