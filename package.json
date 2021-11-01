@@ -32,7 +32,7 @@
     "qualityCheck:findDeadcode": "ts-prune -e",
     "qualityCheck:lint": "eslint --ignore-path .gitignore .",
     "qualityCheck:fmt": "prettier  --check --ignore-path .gitignore .",
-    "prepack": "yarn qualityCheck && rm -rf lib && tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json",
+    "prepack": "rm -rf lib && tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json",
     "prepare": "git config --local core.hooksPath .githooks"
   },
   "dependencies": {
