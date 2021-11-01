@@ -1,3 +1,6 @@
+"use strict";
+
+const { appConfig } = require("./app.config");
 const { plugin } = require("interactive-commit");
 
 const notSelected = { description: "_NotSelected_", value: "" };
@@ -46,8 +49,7 @@ BREAKING CHANGE: {{breakingChange}}`,
      * This is the theme color of the terminal.
      */
     color: "green",
-
-    templateName: "Conventional Commit with gitmoji",
+    templateName: "Conventional Commit",
   },
   questionDictionary: [
     {
@@ -55,52 +57,12 @@ BREAKING CHANGE: {{breakingChange}}`,
       type: "search-list",
       message: "Please select a type.",
       getChoices: () =>
-        /**
-         * https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional
-         */
-        [
-          { description: "feat: New feature", value: "feat" },
-          { description: "fix: Bug fix", value: "fix" },
-          { description: "docs: Documentation only changes", value: "docs" },
-          {
-            description:
-              "style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)",
-            value: "style",
-          },
-          {
-            description:
-              "refactor: Code change that neither fixes a bug nor adds a feature",
-            value: "refactor",
-          },
-          {
-            description: "perf: Code change that improves performance",
-            value: "perf",
-          },
-          {
-            description:
-              "test: Adding missing tests or correcting existing tests",
-            value: "test",
-          },
-          {
-            description:
-              "build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)",
-            value: "build",
-          },
-          {
-            description:
-              "ci: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)",
-            value: "ci",
-          },
-          {
-            description:
-              "chore: Other changes that don't modify src or test files",
-            value: "chore",
-          },
-          {
-            description: "revert: Reverts a previous commit",
-            value: "revert",
-          },
-        ],
+        appConfig.map((v) => ({
+          value: v.value,
+          description: `${v.value}: (${v.release ? v.release : "no release"}) ${
+            v.description
+          }`,
+        })),
     },
     {
       name: "scope",
@@ -108,10 +70,11 @@ BREAKING CHANGE: {{breakingChange}}`,
       message: "Please select a scope.",
       getChoices: () => [
         notSelected,
-        { description: "UserInterface", value: "UserInterface" },
-        { description: "Interface", value: "Interface" },
-        { description: "UseCase", value: "UseCase" },
-        { description: "Domain", value: "Domain" },
+        { description: "app: App", value: "app" },
+        { description: "cui: Character user interface", value: "cui" },
+        { description: "domain: Domain", value: "domain" },
+        { description: "opt: Option", value: "opt" },
+        { description: "other: Other directory", value: "other" },
       ],
       overwriteTpl: (tpl) => tpl.replace("()", ""),
     },

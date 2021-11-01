@@ -4307,10 +4307,10 @@ inquirer@^3.3.0:
     strip-ansi "^4.0.0"
     through "^2.3.6"
 
-interactive-commit@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/interactive-commit/-/interactive-commit-2.0.1.tgz#cf6169f343cd4791a5f5c697e157737d2b96aa27"
-  integrity sha512-I+vDINh9z8eCi/Dv3elY0LozCcgFG93/sZFHAaNgPnb0S4knrx/I6w+hwkCirtjuPnr8CBauVkWxmKmXzqW18Q==
+interactive-commit@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/interactive-commit/-/interactive-commit-2.0.2.tgz#e040d9163abd64ddd364213994fb840803a8dba9"
+  integrity sha512-vklczucki57Itgn85FyoP+yh0mjhRrrOPI/ZkS76kLekWGHNE+APH3q9tIWj79rcP0bveQpYdexYwWNZrHKO/g==
   dependencies:
     "@octokit/rest" "18.12.0"
     cac "6.7.11"

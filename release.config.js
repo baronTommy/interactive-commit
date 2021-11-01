@@ -1,4 +1,6 @@
-const conf = require("./interactive-commit.config");
+"use strict";
+
+const { appConfig } = require("./app.config");
 
 module.exports = {
   branches: ["main"],
@@ -7,6 +9,10 @@ module.exports = {
       "@semantic-release/commit-analyzer",
       {
         preset: "conventionalcommits",
+        releaseRules: appConfig.map((v) => ({
+          type: v.value,
+          release: v.release,
+        })),
       },
     ],
     [
@@ -14,13 +20,11 @@ module.exports = {
       {
         preset: "conventionalcommits",
         presetConfig: {
-          types: [
-            ...conf.questionDictionary[0].getChoices().map((v) => ({
-              type: v.value,
-              section: v.value,
-              hidden: false,
-            })),
-          ],
+          types: appConfig.map((v) => ({
+            type: v.value,
+            section: v.value,
+            hidden: false,
+          })),
         },
       },
     ],

@@ -30,6 +30,7 @@ const renderTpl: RenderTpl = (p) => {
         paddingRight: 1,
       },
       header: {
+        alignment: "center",
         content: chalk.bold(p.config.templateName),
       },
       border: {
