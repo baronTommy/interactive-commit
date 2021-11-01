@@ -1,3 +1,42 @@
+## [2.0.0](https://github.com/baronTommy/interactive-commit/compare/v1.5.2...v2.0.0) (2021-11-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* main export
+
+### perf
+
+* :heavy_minus_sign: fix packages, script ([51531da](https://github.com/baronTommy/interactive-commit/commit/51531da8db4eb15adeb924aef8861030400366fe))
+
+
+### chore
+
+* :hammer: fix script ([d9a2408](https://github.com/baronTommy/interactive-commit/commit/d9a2408c4186eff04164369209a48a63cf3c0f00))
+* :hammer: fix scripts ([cd1e6f4](https://github.com/baronTommy/interactive-commit/commit/cd1e6f47efbb030a848286ad49ff5a2acc27a274))
+
+
+### refactor
+
+* :recycle: fix export ([4fee6f0](https://github.com/baronTommy/interactive-commit/commit/4fee6f082fa68365c54e2a701490215d315ae7dd))
+
+
+### build
+
+* :arrow_up: update package ([73d08c2](https://github.com/baronTommy/interactive-commit/commit/73d08c2f8947aa87ea548e03500a42b8515cbe6a))
+* :wrench: fix tsconf ([8524346](https://github.com/baronTommy/interactive-commit/commit/8524346f3296fcde1e4a34d3fbaba5e03c56bcbf))
+* **deps-dev:** bump @semantic-release/changelog from 6.0.0 to 6.0.1 ([7a4513b](https://github.com/baronTommy/interactive-commit/commit/7a4513ba46011d81cd0719cba1206735c8011244))
+* **deps-dev:** bump @typescript-eslint/eslint-plugin ([c7625dc](https://github.com/baronTommy/interactive-commit/commit/c7625dc7d91a52311ccdf5a05feffc8672cc770b))
+* **deps-dev:** bump lint-staged from 11.2.4 to 11.2.6 ([3dd2990](https://github.com/baronTommy/interactive-commit/commit/3dd2990f27cc6540549f390e64b960dd34637fc4))
+* **deps:** bump gitmojis from 3.5.0 to 3.6.0 ([ed1f9f0](https://github.com/baronTommy/interactive-commit/commit/ed1f9f06247e7c8971b737c3e2d4f3dbcf944bf5))
+* **deps:** bump tsc-alias from 1.3.10 to 1.4.0 ([43eb042](https://github.com/baronTommy/interactive-commit/commit/43eb042a58f85dcf7c9de34e9f5062b12acaba65))
+
+
+### ci
+
+* :bug: fix lock file ([187938f](https://github.com/baronTommy/interactive-commit/commit/187938fea8ee02cc541aec45be5ce9f4675714c1))
+* :construction_worker: fix ci ([60da01c](https://github.com/baronTommy/interactive-commit/commit/60da01cbb24e5484a7a1f4d65462fa3fac014332))
+
 ### [1.5.2](https://github.com/baronTommy/interactive-commit/compare/v1.5.1...v1.5.2) (2021-10-31)
 
 ### fix
