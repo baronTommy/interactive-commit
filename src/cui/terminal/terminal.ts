@@ -28,8 +28,10 @@ const renderTpl: RenderTpl = (p) => {
       columnDefault: {
         paddingLeft: 1,
         paddingRight: 1,
+        width: 35,
       },
       header: {
+        alignment: "center",
         content: chalk.bold(p.config.templateName),
       },
       border: {
