@@ -11,9 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install modules
-        run: npm i
-      - name: Run Test
-        run: npm run quality
+        run: yarn
+      - name: Quality check
+        run: yarn qualityCheck
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v2
         with:
