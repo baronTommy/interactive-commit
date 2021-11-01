@@ -1,14 +1,8 @@
-import * as github from "./plugin/github";
+import { fetchIssues } from "./plugin/github";
 import { gitmojis } from "./plugin/gitmoji";
-import { conventionalCommit } from "./setting/conventionalCommit";
 
-export type { Setting } from "~/domain/core";
-
+// ts-prune-ignore-next
 export const plugin = {
-  gitmojis,
-  github,
-};
-
-export const setting = {
-  conventionalCommit,
+  gitmoji: { gitmojis },
+  github: { fetchIssues },
 };
