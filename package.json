@@ -62,14 +62,11 @@
   "repository": "baronTommy/interactive-commit",
   "scripts": {
     "qualityCheck": "run-s qualityCheck:*",
-    "qualityCheck:unitTest": "jest --testPathIgnorePatterns .gitignore",
     "qualityCheck:type": "tsc --project ./tsconfig.build.json --noEmit",
-    "qualityCheck:jscpd": "jscpd .",
+    "qualityCheck:unitTest": "jest --testPathIgnorePatterns .gitignore",
+    "qualityCheck:redundancy": "jscpd .",
     "qualityCheck:lint": "eslint --ignore-path .gitignore .",
-    "qualityCheck:fmt": "yarn fmt --check",
-    "fix:lint": "yarn qualityCheck:lint --fix",
-    "fix:fmt": "yarn fmt --write",
-    "fmt": "prettier --ignore-path .gitignore .",
+    "qualityCheck:fmt": "prettier  --check --ignore-path .gitignore .",
     "prepack": "yarn qualityCheck && rm -rf lib && tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json",
     "prepare": "git config --local core.hooksPath .githooks"
   }
