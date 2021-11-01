@@ -28,7 +28,6 @@ const renderTpl: RenderTpl = (p) => {
       columnDefault: {
         paddingLeft: 1,
         paddingRight: 1,
-        width: 35,
       },
       header: {
         alignment: "center",
