@@ -43,8 +43,7 @@
     "gitmojis": "3.6.0",
     "inquirer": "8.2.0",
     "inquirer-search-list": "1.2.6",
-    "table": "6.7.2",
-    "tsc-alias": "1.4.0"
+    "table": "6.7.2"
   },
   "devDependencies": {
     "@semantic-release/changelog": "6.0.1",
