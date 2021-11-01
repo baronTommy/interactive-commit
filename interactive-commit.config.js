@@ -1,8 +1,8 @@
-const { github, gitmojis } = require("interactive-commit").plugin;
+const { plugin } = require("interactive-commit");
 
 const notSelected = { description: "_NotSelected_", value: "" };
 
-const gitmoji = gitmojis.map((v) => ({
+const gitmoji = plugin.gitmoji.gitmojis.map((v) => ({
   description: `${v.emoji} ${v.description}`,
   value: v.code,
 }));
@@ -11,7 +11,7 @@ const gitmoji = gitmojis.map((v) => ({
  * https://github.com/octokit/rest.js/
  */
 const fetchMyIssues = () =>
-  github
+  plugin.github
     .fetchIssues({
       owner: "baronTommy",
       repo: "interactive-commit",

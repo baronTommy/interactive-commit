@@ -3884,13 +3884,6 @@ gitignore-to-glob@^0.3.0:
   resolved "https://registry.npmjs.org/gitignore-to-glob/-/gitignore-to-glob-0.3.0.tgz"
   integrity sha1-WfMqs9m2bOUCmcPtJMsO9CoJTOs=
 
-gitmojis@3.5.0:
-  version "3.5.0"
-  resolved "https://registry.npmjs.org/gitmojis/-/gitmojis-3.5.0.tgz"
-  integrity sha512-bwpxpG808OcPZa78C0Kr0f31lYI4ELvx1xKxmPWL+/jEVbQ7Hld0axyMVWCr1xuz/Tu1h/H54V4SLw3HPDbYSA==
-  dependencies:
-    next-pwa "^5.2.24"
-
 gitmojis@3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/gitmojis/-/gitmojis-3.6.0.tgz#5ac5bfe401e01d9c02262d8b394acee497fb64d9"
@@ -4314,20 +4307,19 @@ inquirer@^3.3.0:
     strip-ansi "^4.0.0"
     through "^2.3.6"
 
-interactive-commit@1.1.3:
-  version "1.1.3"
-  resolved "https://registry.npmjs.org/interactive-commit/-/interactive-commit-1.1.3.tgz"
-  integrity sha512-YNTAmFAnhMSi3eAWgwgjLfcaB992P/8Pf/fVbYrEKN4TGLWDi1gR52yBr8zRcNBPtOwM6hhROXHPc4TuzO8eXg==
+interactive-commit@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/interactive-commit/-/interactive-commit-2.0.1.tgz#cf6169f343cd4791a5f5c697e157737d2b96aa27"
+  integrity sha512-I+vDINh9z8eCi/Dv3elY0LozCcgFG93/sZFHAaNgPnb0S4knrx/I6w+hwkCirtjuPnr8CBauVkWxmKmXzqW18Q==
   dependencies:
     "@octokit/rest" "18.12.0"
     cac "6.7.11"
     chalk "4.1.2"
     cosmiconfig "7.0.1"
-    gitmojis "3.5.0"
+    gitmojis "3.6.0"
     inquirer "8.2.0"
     inquirer-search-list "1.2.6"
     table "6.7.2"
-    tsc-alias "1.3.10"
 
 internal-slot@^1.0.3:
   version "1.0.3"
