@@ -63,14 +63,13 @@
   "license": "MIT",
   "repository": "baronTommy/interactive-commit",
   "scripts": {
-    "quality": "run-p quality:*",
-    "quality:lint-fmt": "run-s lint fmt",
-    "quality:unitTest": "jest --testPathIgnorePatterns .gitignore",
-    "quality:jscpd": "jscpd ./src",
-    "quality:type": "tsc --project ./tsconfig.json --noEmit",
-    "lint": "eslint --fix --ignore-path .gitignore .",
-    "fmt": "prettier --write --ignore-path .gitignore .",
-    "prepack": "npm run quality && rm -rf lib && tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json",
+    "qualityCheck": "run-p qualityCheck:*",
+    "qualityCheck:unitTest": "jest --testPathIgnorePatterns .gitignore",
+    "qualityCheck:type": "tsc --project ./tsconfig.build.json --noEmit",
+    "qualityCheck:lint": "eslint --fix --ignore-path .gitignore .",
+    "qualityCheck:fmt": "prettier --write --ignore-path .gitignore .",
+    "qualityCheck:jscpd": "jscpd .",
+    "prepack": "yarn qualityCheck && rm -rf lib && tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json",
     "prepare": "git config --local core.hooksPath .githooks"
   }
 }

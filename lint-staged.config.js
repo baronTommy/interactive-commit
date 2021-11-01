@@ -1,7 +1,7 @@
 module.exports = {
-  "*.json": ["npm run fmt"],
-  "*.md": ["npm run fmt"],
-  "*.yml": ["npm run fmt"],
-  "*.js": ["npm run lint", "npm run fmt"],
-  "*.{ts,tsx}": ["npm run lint", "npm run fmt"],
+  "*.json": ["npm run qualityCheck:fmt"],
+  "*.md": ["npm run qualityCheck:fmt"],
+  "*.yml": ["npm run qualityCheck:fmt"],
+  "*.js": ["npm run qualityCheck:lint", "npm run qualityCheck:fmt"],
+  "*.{ts,tsx}": ["npm run qualityCheck:lint", "npm run qualityCheck:fmt"],
 };
