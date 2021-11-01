@@ -46,6 +46,7 @@
     "table": "6.7.2"
   },
   "devDependencies": {
+    "@semantic-release/git": "10.0.1",
     "@semantic-release/npm": "8.0.2",
     "@types/chalk": "2.2.0",
     "@types/inquirer": "8.1.3",
