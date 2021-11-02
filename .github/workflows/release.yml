@@ -18,11 +18,8 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Install Yarn
-        run: npm install -g yarn
-
       - name: Install
-        run: yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
+        run: yarn
 
       - name: Quality check
         run: yarn qualityCheck
