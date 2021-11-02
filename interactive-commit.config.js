@@ -35,22 +35,12 @@ const fetchMyIssues = () =>
  * @type {import('interactive-commit').Setting}
  */
 module.exports = {
-  /**
-   * The part that matches questionDictionary.name will be replaced.
-   */
   template: `{{type}}({{scope}}): {{gitmoji}} {{description}}
 
 {{body}}
 
 Close #{{issue}}
 BREAKING CHANGE: {{breakingChange}}`,
-  config: {
-    /**
-     * This is the theme color of the terminal.
-     */
-    color: "green",
-    templateName: "Conventional Commit",
-  },
   questionDictionary: [
     {
       name: "type",
@@ -69,7 +59,6 @@ BREAKING CHANGE: {{breakingChange}}`,
       type: "search-list",
       message: "Please select a scope.",
       getChoices: () => [
-        notSelected,
         { description: "app: App", value: "app" },
         { description: "cui: Character user interface", value: "cui" },
         { description: "domain: Domain", value: "domain" },
@@ -114,4 +103,11 @@ BREAKING CHANGE: {{breakingChange}}`,
       overwriteTpl: (tpl) => tpl.replace(/BREAKING CHANGE: $/, "").trim(),
     },
   ],
+  config: {
+    /**
+     * This is the theme color of the terminal.
+     */
+    color: "green",
+    templateName: "Conventional Commit",
+  },
 };
