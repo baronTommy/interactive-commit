@@ -59,11 +59,14 @@ BREAKING CHANGE: {{breakingChange}}`,
       type: "search-list",
       message: "Please select a scope.",
       getChoices: () => [
-        { description: "cui: Character user interface", value: "cui" },
-        { description: "domain: Domain", value: "domain" },
-        { description: "opt: Option", value: "opt" },
-        { description: "useCase: useCase", value: "useCase" },
+        ...require("fs")
+          .readdirSync("./src")
+          .map((v) => ({
+            description: v,
+            value: v,
+          })),
         { description: "other: Other directory", value: "other" },
+        notSelected,
       ],
       overwriteTpl: (tpl) => tpl.replace("()", ""),
     },
