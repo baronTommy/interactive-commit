@@ -15,13 +15,13 @@
   </a>
 </p>
 
-## overview
+## Overview
 
 Create messages in an interactive format.
 
 ![preview](https://github.com/baronTommy/interactive-commit/blob/main/media/eyeCatch.gif)
 
-## usage
+## Usage
 
 ```bash
 npm i -D interactive-commit
