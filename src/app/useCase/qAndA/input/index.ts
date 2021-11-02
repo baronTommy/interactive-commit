@@ -1,1 +1,0 @@
-export { makeQuestion } from "./input";
