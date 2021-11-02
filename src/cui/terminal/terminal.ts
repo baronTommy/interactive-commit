@@ -4,8 +4,8 @@ import * as inquirer from "inquirer";
 // @ts-expect-error
 import * as inquirerAutocompletePrompt from "inquirer-search-list";
 import { table } from "table";
-import * as workFlow from "~/app/useCase/workFlow";
-import type { Question, Setting } from "~/domain/core";
+import type { Question, Setting } from "~/domain/interactiveCommit/core";
+import * as workFlow from "~/useCase/interactiveCommit/workFlow";
 import type { AnswerVO } from "./type";
 inquirer.registerPrompt("search-list", inquirerAutocompletePrompt);
 
@@ -65,7 +65,7 @@ type QAndA = (p: {
 }) => Promise<AnswerVO>;
 const qAndA: QAndA = (p) =>
   workFlow
-    .findQuestion(p.question, p.template)
+    .prepareQuestions(p)
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     .then((v) => inquirer.prompt<AnswerVO>(v.question as any));
 

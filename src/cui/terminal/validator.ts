@@ -1,4 +1,4 @@
-import type { Question } from "~/domain/core";
+import type { Question } from "~/domain/interactiveCommit/core";
 import type { AnswerValue, AnswerVO } from "./type";
 
 type FmtAnswer = (p: AnswerValue) => string;
