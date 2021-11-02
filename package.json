@@ -29,8 +29,8 @@
     "qualityCheck:type": "tsc --project ./tsconfig.build.json --noEmit",
     "qualityCheck:unitTest": "jest --testPathIgnorePatterns .gitignore",
     "qualityCheck:redundancy": "jscpd .",
-    "qualityCheck:findDeadcode": "ts-prune -e",
-    "qualityCheck:lint": "eslint --ignore-path .gitignore .",
+    "qualityCheck:findDeadCode": "ts-prune -e",
+    "qualityCheck:esLint": "eslint --ignore-path .gitignore .",
     "qualityCheck:fmt": "prettier  --check --ignore-path .gitignore .",
     "prepack": "yarn qualityCheck && rm -rf lib && tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json",
     "prepare": "git config --local core.hooksPath .githooks"

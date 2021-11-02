@@ -9,6 +9,9 @@ module.exports = {
     "plugin:jest/recommended",
     "prettier",
   ],
+  rules: {
+    complexity: ["error", 10],
+  },
   overrides: [
     {
       files: [".eslintrc.js", "*.config.js"],
