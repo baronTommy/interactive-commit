@@ -1,13 +1,12 @@
-import * as workFlow from "~/app/useCase/workFlow";
 import * as terminal from "~/cui/terminal";
-import type { Setting } from "~/domain/core";
+import type * as WorkFlow from "~/domain/interactiveCommit/workFlow";
+import * as workFlow from "~/useCase/interactiveCommit/workFlow";
 
-type Main = (p: Setting) => Promise<string>;
-export const main: Main = async (p) => {
+export const interactiveCommit: WorkFlow.InteractiveCommit = async (p) => {
   const question = workFlow.getQuestion(p);
   const template = p.template;
 
-  if (workFlow.isDone(question)) {
+  if (question === undefined) {
     return Promise.resolve(template).finally(terminal.clear);
   }
 
@@ -36,7 +35,7 @@ export const main: Main = async (p) => {
     ? question.overwriteTpl(newTemplate)
     : newTemplate;
 
-  return main({
+  return interactiveCommit({
     questionDictionary: p.questionDictionary,
     template: tpl,
     config: p.config,

@@ -1,7 +1,7 @@
 import { cac } from "cac";
 import { cosmiconfigSync } from "cosmiconfig";
-import { main } from "~/app/main";
 import { commitMsg } from "~/cui/commit";
+import { interactiveCommit } from "~/useCase/interactiveCommit";
 
 const cli = cac();
 
@@ -13,7 +13,7 @@ cli
       return;
     }
     const conf = cosmiconfigSync("interactive-commit").search()?.config;
-    main(conf).then(commitMsg);
+    interactiveCommit(conf).then(commitMsg).catch(console.error);
   });
 
 cli.help();

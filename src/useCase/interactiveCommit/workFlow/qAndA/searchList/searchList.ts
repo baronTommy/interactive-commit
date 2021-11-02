@@ -1,14 +1,10 @@
-import type { SearchListTypeQ, Setting } from "~/domain/core";
+import type { SearchListTypeQ, Setting } from "~/domain/interactiveCommit/core";
+import type * as WorkFlow from "~/domain/interactiveCommit/workFlow";
 
 type MakeQuestion = (p: {
   question: SearchListTypeQ;
   template: Setting["template"];
-}) => Promise<{
-  question: SearchListTypeQ & {
-    choices: Array<{ name: string; description: string; value: string }>;
-  };
-  template: Setting["template"];
-}>;
+}) => Promise<WorkFlow.SearchListTypeQnTpl>;
 export const makeQuestion: MakeQuestion = async (p) => {
   const choicesObj = await p.question.getChoices();
 

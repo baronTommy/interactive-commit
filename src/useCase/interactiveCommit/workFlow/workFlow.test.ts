@@ -1,9 +1,9 @@
-import { makeQuestion as makeQuestionForInput } from "~/app/useCase/qAndA/input";
-import { makeQuestion as makeQuestionForSearchList } from "~/app/useCase/qAndA/searchList";
-import { findQuestion, getQuestion, isDone, updateTemplate } from "./workFlow";
+import { makeQuestion as makeQuestionForInput } from "./qAndA/input";
+import { makeQuestion as makeQuestionForSearchList } from "./qAndA/searchList";
+import { getQuestion, prepareQuestions, updateTemplate } from "./workFlow";
 
-jest.mock("~/app/useCase/qAndA/searchList");
-jest.mock("~/app/useCase/qAndA/input");
+jest.mock("./qAndA/input");
+jest.mock("./qAndA/searchList");
 
 describe("getQuestion", () => {
   test("array is empty", () => {
@@ -25,16 +25,6 @@ describe("getQuestion", () => {
   });
 });
 
-describe("isDone", () => {
-  test("undefined", () => {
-    expect(isDone(undefined)).toEqual(true);
-  });
-  test("not undefined", () => {
-    // @ts-expect-error
-    expect(isDone("")).toEqual(false);
-  });
-});
-
 describe("updateTemplate", () => {
   test("replace test", () => {
     const newTpl = updateTemplate({
@@ -47,23 +37,25 @@ describe("updateTemplate", () => {
   });
 });
 
-describe("findQuestion", () => {
+describe("prepareQuestions", () => {
   test("search-list", () => {
     (makeQuestionForSearchList as jest.Mock) = jest.fn();
     //@ts-expect-error
-    findQuestion({ type: "search-list" }, "");
+    prepareQuestions({ question: { type: "search-list" } }, "");
     expect(makeQuestionForSearchList).toHaveBeenCalled();
   });
 
   test("input", () => {
     (makeQuestionForInput as jest.Mock) = jest.fn();
     //@ts-expect-error
-    findQuestion({ type: "input" }, "");
+    prepareQuestions({ question: { type: "input" } }, "");
     expect(makeQuestionForInput).toHaveBeenCalled();
   });
 
   test("error test", () => {
-    //@ts-expect-error
-    expect(() => findQuestion({ type: "" }, "")).toThrowError();
+    expect(() =>
+      //@ts-expect-error
+      prepareQuestions({ question: { type: "" } }, "")
+    ).toThrowError();
   });
 });
