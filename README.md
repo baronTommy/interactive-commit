@@ -15,9 +15,13 @@
   </a>
 </p>
 
+## overview
+
+Create messages in an interactive format.
+
 ![preview](https://github.com/baronTommy/interactive-commit/blob/main/media/eyeCatch.gif)
 
-## Use
+## usage
 
 ```bash
 npm i -D interactive-commit
@@ -27,20 +31,13 @@ touch interactive-commit.config.js
 
 example
 
-- https://github.com/baronTommy/interactive-commit/blob/main/interactive-commit.config.js
+https://github.com/baronTommy/interactive-commit/blob/main/interactive-commit.config.js
+
+The part that matches `questionDictionary.name` will be replaced.  
+Change the templates and questions as you like.  
+This setting is Conventional Commit and gitmoji.
 
 ## Commit hook
-
-### husky
-
-`prepare-commit-msg`
-
-```bash
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-exec < /dev/tty && npx interactive-commit commit --hook
-```
 
 ### githooks
 
@@ -49,10 +46,7 @@ exec < /dev/tty && npx interactive-commit commit --hook
 ```bash
 #!/bin/sh
 
-if [[ "$(git config --get my.interactive)" = yes ]];then
-    # git -c my.interactive=yes commit
-    exec < /dev/tty && yarn interactive-commit commit --hook
-fi
+exec < /dev/tty && yarn interactive-commit commit --hook
 ```
 
 ```bash
@@ -65,4 +59,15 @@ git -c my.interactive=yes commit
 "scripts": {
   "prepare": "git config --local core.hooksPath .githooks"
 }
+```
+
+### husky
+
+`prepare-commit-msg`
+
+```bash
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+exec < /dev/tty && npx interactive-commit commit --hook
 ```
