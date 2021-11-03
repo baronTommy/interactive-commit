@@ -1,18 +1,17 @@
-import * as terminal from "~/cui/terminal";
 import type * as WorkFlow from "~/domain/interactiveCommit/workFlow";
 import * as workFlow from "~/useCase/interactiveCommit/workFlow";
 
 export const interactiveCommit: WorkFlow.InteractiveCommit = async (p) => {
-  const question = workFlow.getQuestion(p);
-  const template = p.template;
+  const question = workFlow.getQuestion(p.setting);
+  const template = p.setting.template;
 
   if (question === undefined) {
-    return Promise.resolve(template).finally(terminal.clear);
+    return Promise.resolve(template).finally(p.ui.clear);
   }
 
-  const answerVO = await terminal.renderingQnA({ ...p, question });
+  const answerVO = await p.ui.renderingQnA({ ...p.setting, question });
 
-  const mayBeAnswer = terminal.validator.valid({
+  const mayBeAnswer = p.ui.validator.valid({
     answerVO,
     questionName: question.name,
   });
@@ -36,8 +35,11 @@ export const interactiveCommit: WorkFlow.InteractiveCommit = async (p) => {
     : newTemplate;
 
   return interactiveCommit({
-    questionDictionary: p.questionDictionary,
-    template: tpl,
-    config: p.config,
+    ui: p.ui,
+    setting: {
+      questionDictionary: p.setting.questionDictionary,
+      template: tpl,
+      config: p.setting.config,
+    },
   });
 };

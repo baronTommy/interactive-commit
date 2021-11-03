@@ -10,9 +10,6 @@
   <a href="https://codecov.io/gh/baronTommy/interactive-commit">
     <img src="https://codecov.io/gh/baronTommy/interactive-commit/branch/main/graph/badge.svg?token=RBVLU6CIPQ"/>
   </a>
-  <a href="https://github.com/baronTommy/interactive-commit/actions/workflows/release.yml">
-    <img alt=".github/workflows/release.yml" src="https://github.com/baronTommy/interactive-commit/actions/workflows/release.yml/badge.svg">
-  </a>
 </p>
 
 ## Overview

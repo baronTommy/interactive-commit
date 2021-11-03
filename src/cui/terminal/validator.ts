@@ -1,41 +1,29 @@
-import type { Question } from "~/domain/interactiveCommit/core";
-import type { AnswerValue, AnswerVO } from "./type";
+import type * as WorkFlow from "~/domain/interactiveCommit/workFlow";
 
-type FmtAnswer = (p: AnswerValue) => string;
+type Answer = WorkFlow.AnswerVO[keyof WorkFlow.AnswerVO];
 
-const isValid = (p: unknown): p is AnswerValue =>
+const isValid = (p: unknown): p is Answer =>
   typeof p === "string" || typeof p === "number";
 
-const fmtAnswer: FmtAnswer = (p: AnswerValue) =>
+type FmtAnswer = (p: Answer) => string;
+const fmtAnswer: FmtAnswer = (p) =>
   typeof p === "number" ? Number(p).toString() : p;
 
-type Valid = (p: { answerVO: AnswerVO; questionName: Question["name"] }) =>
-  | {
-      isErr: false;
-      value: {
-        answer: string;
+export const valid: Parameters<WorkFlow.InteractiveCommit>[0]["ui"]["validator"]["valid"] =
+  (p) => {
+    const mayBeAnswer = p.answerVO[p.questionName];
+
+    if (isValid(mayBeAnswer)) {
+      return {
+        isErr: false,
+        value: { answer: fmtAnswer(mayBeAnswer) },
       };
     }
-  | {
-      isErr: true;
-      error: {
-        reason: string;
-      };
-    };
-export const valid: Valid = (p) => {
-  const mayBeAnswer = p.answerVO[p.questionName];
 
-  if (isValid(mayBeAnswer)) {
     return {
-      isErr: false,
-      value: { answer: fmtAnswer(mayBeAnswer) },
+      isErr: true,
+      error: {
+        reason: "The answer need to be string or number.",
+      },
     };
-  }
-
-  return {
-    isErr: true,
-    error: {
-      reason: "The answer need to be string or number.",
-    },
   };
-};
