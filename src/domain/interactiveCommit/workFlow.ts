@@ -1,9 +1,47 @@
 import type { Answer, InputTypeQ, Question, Setting } from "./core";
 
+export type AnswerVO = Record<Question["name"], string | number>;
+
+type UI = {
+  /**
+   * 画面の初期化
+   */
+  clear: () => void;
+  /**
+   * 設問のレンダリング
+   */
+  renderingQnA: (
+    p: {
+      question: Question;
+    } & Setting
+  ) => Promise<AnswerVO>;
+  validator: {
+    /**
+     * 回答の検証
+     */
+    valid: (p: { answerVO: AnswerVO; questionName: Question["name"] }) =>
+      | {
+          isErr: false;
+          value: {
+            answer: string;
+          };
+        }
+      | {
+          isErr: true;
+          error: {
+            reason: string;
+          };
+        };
+  };
+};
+
 /**
  * 設定を元に、入力値で補間されたテンプレートを返す
  */
-export type InteractiveCommit = (p: Setting) => Promise<Setting["template"]>;
+export type InteractiveCommit = (p: {
+  setting: Setting;
+  ui: UI;
+}) => Promise<Setting["template"]>;
 
 /**
  * 設問の取得
