@@ -1,8 +1,8 @@
 import { cac } from "cac";
 import { cosmiconfigSync } from "cosmiconfig";
 import { commitMsg } from "~/cui/commit";
-import { interactiveCommit } from "~/useCase/interactiveCommit";
-
+import * as terminal from "~/cui/terminal";
+import { interactiveCommit } from "~/presenter/interactiveCommit";
 const cli = cac();
 
 cli
@@ -12,8 +12,10 @@ cli
     if (!args.hook) {
       return;
     }
-    const conf = cosmiconfigSync("interactive-commit").search()?.config;
-    interactiveCommit(conf).then(commitMsg).catch(console.error);
+    const setting = cosmiconfigSync("interactive-commit").search()?.config;
+    interactiveCommit({ setting, ui: terminal })
+      .then(commitMsg)
+      .catch(console.error);
   });
 
 cli.help();

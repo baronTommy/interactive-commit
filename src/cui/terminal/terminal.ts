@@ -5,8 +5,8 @@ import * as inquirer from "inquirer";
 import * as inquirerAutocompletePrompt from "inquirer-search-list";
 import { table } from "table";
 import type { Question, Setting } from "~/domain/interactiveCommit/core";
+import type * as WorkFlow from "~/domain/interactiveCommit/workFlow";
 import * as workFlow from "~/useCase/interactiveCommit/workFlow";
-import type { AnswerVO } from "./type";
 inquirer.registerPrompt("search-list", inquirerAutocompletePrompt);
 
 type RenderTpl = (p: { question: Question } & Setting) => void;
@@ -62,17 +62,19 @@ const renderTpl: RenderTpl = (p) => {
 type QAndA = (p: {
   question: Question;
   template: Setting["template"];
-}) => Promise<AnswerVO>;
+}) => Promise<WorkFlow.AnswerVO>;
 const qAndA: QAndA = (p) =>
   workFlow
     .prepareQuestions(p)
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    .then((v) => inquirer.prompt<AnswerVO>(v.question as any));
+    .then((v) => inquirer.prompt<WorkFlow.AnswerVO>(v.question as any));
 
 type Clear = () => void;
 export const clear: Clear = console.clear;
 
-type RenderingQnA = (p: { question: Question } & Setting) => Promise<AnswerVO>;
+type RenderingQnA = (
+  p: { question: Question } & Setting
+) => Promise<WorkFlow.AnswerVO>;
 export const renderingQnA: RenderingQnA = (p) => {
   clear();
   renderTpl(p);
