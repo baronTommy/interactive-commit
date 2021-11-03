@@ -1,1 +1,0 @@
-export { interactiveCommit } from "./interactiveCommit";
